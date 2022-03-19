@@ -1,10 +1,8 @@
 import { useState } from 'react'
-
 import { v4 } from 'uuid'
+import { FiTrash, FiCheckSquare } from 'react-icons/fi'
 
 import '../styles/tasklist.scss'
-
-import { FiTrash, FiCheckSquare } from 'react-icons/fi'
 
 interface Task {
   id: number;
@@ -26,7 +24,6 @@ export function TaskList() {
     }
     setTasks(oldState => [...oldState, newtask]);
     setNewTaskTitle('')
-
   }
 
   function handleToggleTaskCompletion(id: number) {
